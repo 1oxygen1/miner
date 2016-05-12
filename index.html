@@ -14,13 +14,27 @@
             height: 30px;
             border: 2px solid #f2f2f2;
             background: #c0c0c0;
+            position: relative;
+            cursor: pointer;
         }
         #map > .mine {
             background: #0cf;
         }
+        .cell.hide:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #989898;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div id="mines" ></div>
+    </header>
     <div id="map"></div>
     <script src="app.js"></script>
 </body>
